@@ -40,6 +40,10 @@ Fill Start Date
         
     END
 
+Submit Enroll Form
+    Click    css=button >> text=Salvar
+
+
     # Log    ${start_date}
 
     # Keyboard Key    press    1

@@ -9,6 +9,10 @@ Resource    components/toast.resource
 Resource    pages/login.resource
 Resource    pages/enroll.resource
 
+Resource    database.resource
+
+Library    JSONLibrary
+
 *** Keywords ***
 #Helpers
 Do login
@@ -18,3 +22,12 @@ Do login
     Fill Credentials    ${user}[email]   ${user}[senha]
     Submit Credentials
     User Should Be Looged In    ${user}[name]
+
+Get Fixture 
+    [Arguments]    ${fixture_file}
+
+    ${fixture}    Load JSON From File    
+    ...           ${EXECDIR}/resources/fixtures/${fixture_file}.json
+    ...           encoding=UTF-8
+
+    [Return]    ${fixture}
