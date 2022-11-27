@@ -7,9 +7,10 @@ Go To Login Page
     New Page       http://localhost:3000
 
 Fill Credentials
-    [Arguments]       ${email}    ${senha}  
-    Fill Text      css=input[placeholder="Seu e-mail"]    ${email}
-    Fill Text      css=input[placeholder="Sua Senha"]     ${senha}
+    [Arguments]       ${email}        ${password} 
+
+    Fill Text         css=input[placeholder="Seu e-mail"]    ${email}
+    Fill Text         css=input[placeholder="Sua Senha"]     ${password}
 
 Submit Credentials
     # Click          xpath=//button[text()="Entrar no sistema"]

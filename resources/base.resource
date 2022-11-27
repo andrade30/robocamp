@@ -9,6 +9,10 @@ Resource    components/toast.resource
 Resource    pages/login.resource
 Resource    pages/enroll.resource
 
+
+Resource    services/sessions.resource
+Resource    services/students.resource
+
 Resource    database.resource
 
 Library    JSONLibrary
@@ -19,7 +23,7 @@ Do login
     [Arguments]    ${user}
     
     Go To Login Page
-    Fill Credentials    ${user}[email]   ${user}[senha]
+    Fill Credentials    ${user}[email]   ${user}[password]
     Submit Credentials
     User Should Be Looged In    ${user}[name]
 
