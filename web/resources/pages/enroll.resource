@@ -42,15 +42,3 @@ Fill Start Date
 
 Submit Enroll Form
     Click    css=button >> text=Salvar
-
-
-    # Log    ${start_date}
-
-    # Keyboard Key    press    1
-    # Keyboard Key    press    7
-    # Keyboard Key    press    1
-    # Keyboard Key    press    1
-    # Keyboard Key    press    2
-    # Keyboard Key    press    0
-    # Keyboard Key    press    2
-    # Keyboard Key    press    2
